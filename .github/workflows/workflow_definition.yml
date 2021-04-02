@@ -56,9 +56,9 @@ jobs:
         aws-region: us-west-2 #AWS region where you want to use CodeGuru
 
 
-    - name: AWS CodeGuru Reviewer Security Scanner
-      uses: ./
-      with:
+    - name: AWS CodeGuru Reviewer
+      uses: ./.github/vijejain/cicd-actions 
+      with:          
         src-root: . # Java source code root
         build-root: target # build artifact(s) directory
         event_metadata: ${{ secrets.EVENT_METADATA }}
