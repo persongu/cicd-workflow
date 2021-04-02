@@ -24,6 +24,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    
+    - name: Dump Github content
+      env:
+        EVENT_METADATA: ${{ toJSON(github) }}
+      run: echo "$GITHUB_CONTEXT"
 
     - name: Set up JDK 1.8
       uses: actions/setup-java@v1
@@ -51,11 +56,12 @@ jobs:
         aws-region: us-west-2 #AWS region where you want to use CodeGuru
 
 
-#     - name: AWS CodeGuru Reviewer Security Scanner
-#       uses: ./
-#       with:
-#         src-root: . # Java source code root
-#         build-root: target # build artifact(s) directory
+    - name: AWS CodeGuru Reviewer Security Scanner
+      uses: ./
+      with:
+        src-root: . # Java source code root
+        build-root: target # build artifact(s) directory
+        event_metadata: ${{ secrets.EVENT_METADATA }}
         
 
 #     - name: Upload review result
