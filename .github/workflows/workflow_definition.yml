@@ -58,10 +58,11 @@ jobs:
 
     - name: AWS CodeGuru Reviewer
       uses: ./.github/vijejain/cicd-actions 
+      env: 
+        event_metadata: $EVENT_METADATA
       with:          
         src-root: . # Java source code root
         build-root: target # build artifact(s) directory
-        event_metadata: $EVENT_METADATA
         
 
 #     - name: Upload review result
