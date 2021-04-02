@@ -61,7 +61,7 @@ jobs:
       with:          
         src-root: . # Java source code root
         build-root: target # build artifact(s) directory
-        event_metadata: ${{ secrets.EVENT_METADATA }}
+        event_metadata: ${{ EVENT_METADATA }}
         
 
 #     - name: Upload review result
