@@ -70,9 +70,8 @@ jobs:
     - name: AWS CodeGuru Reviewer
       uses: ./.github/vijejain/cicd-actions 
       with:          
-        src-root: . # Java source code root
-        build-root: target # build artifact(s) directory
-        event_metadata: ${{ toJSON(github.event) }}
+        source_path: . # Java source code root
+        build_path: target # build artifact(s) directory
         
 
 #     - name: Upload review result
