@@ -73,7 +73,7 @@ jobs:
         name: ${{ github.event.repository.name }}
         source_path: . # Java source code root
         build_path: target # build artifact(s) directory
-        event_metadata: ${{ github.event }}
+        event_metadata: ${{ toJSON(github.event) }}
         
 
 #     - name: Upload review result
