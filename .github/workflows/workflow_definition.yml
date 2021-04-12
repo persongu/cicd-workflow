@@ -28,6 +28,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
     
     - name: Dump Github content
       env:
@@ -71,7 +73,7 @@ jobs:
       uses: ./.github/vijejain/cicd-actions 
       with:          
         name: ${{ github.event.repository.name }}
-        source_path: . # Java source code root
+        source_path: github/workspace # Java source code root
         build_path: target # build artifact(s) directory
         event_metadata: ${{ toJSON(github.event) }}
         
