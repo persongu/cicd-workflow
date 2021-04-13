@@ -74,7 +74,7 @@ jobs:
       uses: ./.github/vijejain/cicd-actions 
       with:          
         name: ${{ github.event.repository.name }}
-        source_path: . # Java source code root
+        source_path: src/java/main # Java source code root
         build_path: target # build artifact(s) directory
         event_metadata: ${{ toJSON(github.event) }}
         
