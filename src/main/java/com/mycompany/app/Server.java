@@ -7,12 +7,11 @@ import java.lang.Exception;
  * Hello world!
  *
  */
-public class App
+public class Server
 {
-    public static void main( String[] args )
+    public void bar()
     {
         System.out.println( "Hello World!" );
-        foo("no_use");
     }
 
     private void foo(String p) {
