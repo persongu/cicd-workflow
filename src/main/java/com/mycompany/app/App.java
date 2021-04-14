@@ -23,5 +23,6 @@ public class App
     private void bar(String s) throws Exception
     {
         Cipher c = Cipher.getInstance(s);
+        Cipher d = Cipher.getInstance("TESTING");
     }
 }
