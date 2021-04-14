@@ -11,7 +11,7 @@ public class BrokenFooBar
     {
         System.out.println( "Hello World!" );
     }
-    private void foo(String p) {
+    private void foo(String p) throws Exception {
        String s = "aloha";
        System.out.println(String.format("This is a faulty message: %i", s));
        System.out.format("No %s",1);
