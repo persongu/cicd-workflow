@@ -63,7 +63,7 @@ jobs:
     - name: AWS CodeGuru Reviewer
       uses: ./.github/vijejain/cicd-actions 
       with:          
-#         name: cicd-workflow
+        name: cicd-workflow
         source_path: . # Java source code root
         build_path: target # build artifact(s) directory
         
