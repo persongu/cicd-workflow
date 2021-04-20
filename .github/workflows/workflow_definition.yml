@@ -68,7 +68,7 @@ jobs:
       with:          
         name: test-s3-byob-9
         source_path: . # Java source code root
-        build_path: target # build artifact(s) directory
+#         build_path: target # build artifact(s) directory
 #         s3_bucket: codeguru-reviewer-github-actions
         
 
