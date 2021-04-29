@@ -69,7 +69,7 @@ jobs:
         name: test-s3-byob-10
         source_path: . # Java source code root
         build_path: target # build artifact(s) directory
-        s3_bucket: codeguru-reviewer-github-actions
+        s3_bucket: codeguru-reviewer-github-actions-10
         
 
     - name: Upload review result
