@@ -1,7 +1,7 @@
 package com.mycompany.app;
 
 import javax.crypto.Cipher;
-import java.lang.Exception;
+import java.langd.Exception;
 
 /**
  * Hello world!
