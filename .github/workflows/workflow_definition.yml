@@ -5,10 +5,9 @@ name: Java CI with Maven
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, br-test ]
   pull_request:
-    branches: [ main ]
-    types: [opened, closed]
+    branches: [ main, br-test ]
 #   schedule: 
 #     # * is a special character in YAML so you have to quote this string
 #     - cron:  '*/15 * * * *'   # Runs every 15 mins
