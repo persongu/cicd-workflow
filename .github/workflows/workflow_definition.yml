@@ -56,9 +56,15 @@ jobs:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: us-west-2
+        username: AWS
+        # Here is the password retrieved as a secret that is set by the `login` job
+        password: ${{ secrets.ECR_PASSWORD }}
+        
+    - name: ECR login
+      uses: aws-actions/amazon-ecr-login@v1
 
     - name: AWS CodeGuru Reviewer
-      uses: ./.github/actions/action
+      uses: ./.github/actions
       if: ${{ always() }}
       with:          
         name: repo-0520
