@@ -53,7 +53,7 @@ jobs:
         aws-region: us-west-2
 
     - name: AWS CodeGuru Reviewer
-      uses: ./.github/actions/action
+      uses: ./.github/actions
       if: ${{ always() }}
       with:          
         name: repo-0520
