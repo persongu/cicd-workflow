@@ -69,10 +69,6 @@ inputs:
 runs:
   using: 'docker'
   image: 547919350166.dkr.ecr.us-west-2.amazonaws.com/codegurureviewer-actions:bde7823b-82be-41ac-bd45-16d463e55cf2_codegurureviewer-actions_main
-  credentials:
-        username: AWS
-        # Here is the password retrieved as a secret that is set by the `login` job
-        password: ${{ secrets.ECR_PASSWORD }}
   args:
     - --name
     - ${{ inputs.name }}
