@@ -44,16 +44,6 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
 
-    # Extra step requied for private beta .. 
-    - name: Checkout the action from a private repository
-      uses: actions/checkout@v2
-      if: ${{ always() }}
-      with:
-        repository: vijejain/cicd-actions
-        ref: refs/heads/main
-        token: ${{ secrets.PAT }}
-        path: ./.github/vijejain/cicd-actions
-
     - name: Configure AWS Credentials
       uses: aws-actions/configure-aws-credentials@v1
       if: ${{ always() }}
@@ -63,13 +53,13 @@ jobs:
         aws-region: us-west-2
 
     - name: AWS CodeGuru Reviewer
-      uses: ./.github/vijejain/cicd-actions 
+      uses: ./.github/actions/action
       if: ${{ always() }}
       with:          
-        name: repo-0510
+        name: repo-0520
         source_path: . # Java source code root
         build_path: target # build artifact(s) directory
-        s3_bucket: codeguru-reviewer-github-actions
+        s3_bucket: codeguru-reviewer-67e69cb1-e9b9-4f83-892a-0ea5a5b456c5
         
 
     - name: Upload review result
