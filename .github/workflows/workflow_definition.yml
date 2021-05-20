@@ -33,7 +33,8 @@ jobs:
 
     steps:
     - name: install tar
-      run: sudo yum -y install tar
+      run: echo "hello world"
+      # run: sudo yum -y install tar
 
     - uses: actions/checkout@v2
       with:
