@@ -32,6 +32,9 @@ jobs:
         password: ${{ secrets.ECR_PASSWORD }}
 
     steps:
+    - name: install tar
+      run: yum -y install tar
+
     - uses: actions/checkout@v2
       with:
         fetch-depth: 0
