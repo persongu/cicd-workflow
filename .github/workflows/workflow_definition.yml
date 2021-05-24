@@ -58,7 +58,7 @@ jobs:
         aws-region: us-west-2
 
     - name: ECR login
-        uses: aws-actions/amazon-ecr-login@v1
+      uses: aws-actions/amazon-ecr-login@v1
     - name: Docker pull
       run: docker pull 547919350166.dkr.ecr.us-west-2.amazonaws.com/codegurureviewer-actions:ed7c1533-8dcc-4fd0-8c6f-08c3fe148602_codegurureviewer-actions_main
 
