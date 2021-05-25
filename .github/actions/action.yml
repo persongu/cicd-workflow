@@ -102,3 +102,5 @@ runs:
     - ${{ inputs.s3_bucket }}
     - --output_format
     - ${{ inputs.output_format }}
+    - -v
+    - 'DEBUG'
