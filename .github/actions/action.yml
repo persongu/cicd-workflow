@@ -61,6 +61,10 @@ inputs:
   s3_bucket:
     description: 'S3 Bucket which will be associated with the Repository Association'
     required: false
+  vendor_name:
+    description: 'Vendor Name(e.g. GITHUB, GITLAB) for CI/CD.'
+    default: GITHUB
+    required: false
   output_format:
     description: 'Expected format for the results (e.g SARIF, SAST, JENKINS)'
     default: SARIF
@@ -100,6 +104,8 @@ runs:
     - ${{ inputs.client_id }}
     - --s3_bucket
     - ${{ inputs.s3_bucket }}
+    - --vendor_name
+    - ${{ inputs.vendor_name }}
     - --output_format
     - ${{ inputs.output_format }}
     - -v
