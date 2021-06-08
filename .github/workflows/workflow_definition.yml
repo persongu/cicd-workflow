@@ -66,7 +66,7 @@ jobs:
       uses: ./.github/actions
       if: ${{ always() }}
       with:          
-        name: repo-0520
+        name: repo-0608
         source_path: . # Java source code root
         build_path: target # build artifact(s) directory
         s3_bucket: codeguru-reviewer-67e69cb1-e9b9-4f83-892a-0ea5a5b456c5
