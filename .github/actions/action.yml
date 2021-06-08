@@ -68,7 +68,7 @@ inputs:
   
 runs:
   using: 'docker'
-  image: docker://547919350166.dkr.ecr.us-west-2.amazonaws.com/codegurureviewer-actions:08139724-a535-426d-a1b6-ee34902e8e2f_codegurureviewer-actions_main
+  image: docker://547919350166.dkr.ecr.us-west-2.amazonaws.com/codegurureviewer-actions:3e6aeec4-994e-46f1-9f67-fe637eee5c73_codegurureviewer-actions_main
   args:
     - --name
     - ${{ inputs.name }}
