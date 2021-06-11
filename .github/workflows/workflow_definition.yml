@@ -57,10 +57,10 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: us-west-2
 
-    - name: ECR login
-      uses: aws-actions/amazon-ecr-login@v1
-    - name: Docker pull
-      run: docker pull 547919350166.dkr.ecr.us-west-2.amazonaws.com/codegurureviewer-actions:54d4b77c-42be-4b25-b752-ae0cab395144_codegurureviewer-actions_main
+#    - name: ECR login
+#      uses: aws-actions/amazon-ecr-login@v1
+#    - name: Docker pull
+#      run: docker pull 547919350166.dkr.ecr.us-west-2.amazonaws.com/codegurureviewer-actions:54d4b77c-42be-4b25-b752-ae0cab395144_codegurureviewer-actions_main
 
     # Extra step requied for test private ecr
     - name: Checkout the action from another private repository
