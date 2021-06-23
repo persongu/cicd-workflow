@@ -82,7 +82,7 @@ jobs:
         path: ./.github/actions/codeguru-reviewer
 
     - name: AWS CodeGuru Reviewer
-      uses: ./.github/yueny2020/cicd-actions
+      uses: ./.github/actions/codeguru-reviewer
       if: ${{ success() }}
       with:
         name: repo-0608
