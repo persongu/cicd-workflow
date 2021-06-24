@@ -85,6 +85,7 @@ jobs:
       uses: aws-actions/codeguru-reviewer@v1.1
       if: ${{ success() }}
       with:
+        name: release-test
         build_path: target # build artifact(s) directory
         s3_bucket: codeguru-reviewer-67e69cb1-e9b9-4f83-892a-0ea5a5b456c5
 
