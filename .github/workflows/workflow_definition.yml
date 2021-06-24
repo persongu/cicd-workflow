@@ -85,10 +85,8 @@ jobs:
       uses: ./.github/actions/codeguru-reviewer
       if: ${{ success() }}
       with:
-        name: repo-0608
         build_path: target # build artifact(s) directory
         s3_bucket: codeguru-reviewer-9a775d30-bdc8-4de7-b44f-ceda5b074b28
-        kms_key_id: 0a92bd6c-3fd6-48e3-a463-a6f054f53895
 
 
 #    - name: AWS CodeGuru Reviewer
