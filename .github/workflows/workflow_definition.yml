@@ -86,7 +86,7 @@ jobs:
       if: ${{ success() }}
       with:
         build_path: target # build artifact(s) directory
-        s3_bucket: codeguru-reviewer-9a775d30-bdc8-4de7-b44f-ceda5b074b28
+        s3_bucket: codeguru-reviewer-67e69cb1-e9b9-4f83-892a-0ea5a5b456c5
 
 
 #    - name: AWS CodeGuru Reviewer
